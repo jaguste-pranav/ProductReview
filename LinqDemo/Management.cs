@@ -122,5 +122,15 @@ namespace LinqDemo
             }
         }
 
+        public static void RetrieveNiceMsg(List<ProductReview> reviews)
+        {
+            var list = from products in reviews where products.Review.Equals("Nice") select products;
+
+            foreach (var review in list)
+            {
+                Console.WriteLine("ProductID: " + review.ProductID + ", UserID: " + review.UserID + ", Ratings: " + review.Ratings + " , Review: " + review.Review + " , IsLike: " + review.IsLike);
+            }
+        }
+
     }
 }
