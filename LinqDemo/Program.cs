@@ -37,6 +37,10 @@ namespace LinqDemo
             Console.WriteLine();
             Console.WriteLine("UC2");
             Management.RetrieveTop3(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC3");
+            Management.RetrieveProductwithRating1or4or9(reviews);
         }
 
     }
