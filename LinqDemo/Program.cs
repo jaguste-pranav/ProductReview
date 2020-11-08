@@ -49,6 +49,10 @@ namespace LinqDemo
             Console.WriteLine();
             Console.WriteLine("UC5");
             Management.RetrieveProductIDAndReviews(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC6");
+            Management.SkipTop5Records(reviews);
         }
 
     }
