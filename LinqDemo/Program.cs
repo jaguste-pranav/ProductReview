@@ -41,6 +41,10 @@ namespace LinqDemo
             Console.WriteLine();
             Console.WriteLine("UC3");
             Management.RetrieveProductwithRating1or4or9(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC4");
+            Management.RetrieveCountOfProductReviewsForEachID(reviews);
         }
 
     }

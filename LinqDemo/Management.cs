@@ -29,5 +29,16 @@ namespace LinqDemo
                 Console.WriteLine("ProductID: " + product.ProductID + ", UserID: " + product.UserID + ", Ratings: " + product.Ratings + " , Review: " + product.Review + " , IsLike: " + product.IsLike);
             }
         }
+
+        public static void RetrieveCountOfProductReviewsForEachID(List<ProductReview> reviews)
+        {
+            var resultData = reviews.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Count = x.Count() }).OrderBy(x => x.ProductID);
+
+            foreach (var res in resultData)
+            {
+                Console.WriteLine("Product ID: " + res.ProductID + " Count: " + res.Count);
+            }
+        }
+
     }
 }
