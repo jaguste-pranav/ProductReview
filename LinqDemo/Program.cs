@@ -34,6 +34,8 @@ namespace LinqDemo
                 Console.WriteLine("ProductID: "+review.ProductID+ ", UserID: "+review.UserID+ ", Ratings: "+review.Ratings+ " , Review: "+review.Review+ " , IsLike: "+review.IsLike);
             }
 
+            
+            
         }
 
     }
