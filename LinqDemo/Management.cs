@@ -40,5 +40,19 @@ namespace LinqDemo
             }
         }
 
+        public static void RetrieveProductIDAndReviews(List<ProductReview> reviews)
+        {
+            //In Query Synatx
+            var qlist = from product in reviews select new { product.ProductID, product.Review };
+
+            //In Method Syntax
+            var mlist = reviews.Select(x => new { x.ProductID, x.Review });
+
+            foreach (var product in qlist)
+            {
+                Console.WriteLine("Product ID: " + product.ProductID + " Review: " + product.Review);
+            }
+        }
+
     }
 }

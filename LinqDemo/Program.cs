@@ -45,6 +45,10 @@ namespace LinqDemo
             Console.WriteLine();
             Console.WriteLine("UC4");
             Management.RetrieveCountOfProductReviewsForEachID(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC5");
+            Management.RetrieveProductIDAndReviews(reviews);
         }
 
     }
