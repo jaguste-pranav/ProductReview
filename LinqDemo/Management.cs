@@ -132,5 +132,21 @@ namespace LinqDemo
             }
         }
 
+        public static void AddandRetrieveRecordOfaUserID()
+        {
+            table.Rows.Add(20, 10, 9, "Good", true);
+            table.Rows.Add(21, 10, 3, "Nice", false);
+            table.Rows.Add(11, 10, 3, "Nice", false);
+            table.Rows.Add(14, 10, 10, "Good", true);
+            table.Rows.Add(23, 10, 4, "Good", true);
+
+            var list = table.AsEnumerable().Where(x => x.Field<string>("UserID") == "10").Select(x => x).OrderByDescending(x => Convert.ToInt32(x.Field<string>("Ratings")));
+
+            foreach (var row in list)
+            {
+                Console.WriteLine("ProductID: " + row.Field<string>("ProductID") + ", UserID: " + row.Field<string>("UserID") + ", Ratings: " + row.Field<string>("Ratings") + " , Review: " + row.Field<string>("Review") + " , IsLike: " + row.Field<string>("IsLike"));
+            }
+
+        }
     }
 }

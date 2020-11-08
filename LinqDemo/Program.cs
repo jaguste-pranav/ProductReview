@@ -69,6 +69,10 @@ namespace LinqDemo
             Console.WriteLine();
             Console.WriteLine("UC11");
             Management.RetrieveNiceMsg(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC12");
+            Management.AddandRetrieveRecordOfaUserID();
         }
 
     }
