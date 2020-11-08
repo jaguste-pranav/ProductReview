@@ -53,6 +53,10 @@ namespace LinqDemo
             Console.WriteLine();
             Console.WriteLine("UC6");
             Management.SkipTop5Records(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC8(Fetch records from DataTable)");
+            Management.CreateDataTableUC8();
         }
 
     }
