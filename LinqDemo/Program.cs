@@ -60,7 +60,11 @@ namespace LinqDemo
 
             Console.WriteLine();
             Console.WriteLine("UC9");
-            Management.RetrieveRowByIsLikeUC9();
+            Management.RetrieveRowByIsLike();
+
+            Console.WriteLine();
+            Console.WriteLine("UC10");
+            Management.FindAvgRatingsPerProductID(reviews);
         }
 
     }

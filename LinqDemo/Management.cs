@@ -101,7 +101,7 @@ namespace LinqDemo
             }
         }
 
-        public static void RetrieveRowByIsLikeUC9()
+        public static void RetrieveRowByIsLike()
         {
             var rows = from product in table.AsEnumerable() where product.Field<string>("IsLike").Equals(true) select product; 
 
@@ -110,5 +110,17 @@ namespace LinqDemo
                 Console.WriteLine("ProductID: " + row.Field<string>("ProductID") + ", UserID: " + row.Field<string>("UserID") + ", Ratings: " + row.Field<string>("Ratings") + " , Review: " + row.Field<string>("Review") + " , IsLike: " + row.Field<string>("IsLike"));
             }
         }
+
+        public static void FindAvgRatingsPerProductID(List<ProductReview> reviews)
+        {
+            var list = reviews.GroupBy(x => x.ProductID);
+
+            //Iterating for each ProductID and Calulating Avg Ratings
+            foreach (var groups in list)
+            {
+                Console.WriteLine("ProductID: " + groups.Key + " Average Ratings: " + groups.Average(x => x.Ratings));
+            }
+        }
+
     }
 }
